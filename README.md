@@ -1,9 +1,22 @@
-# Draw Application Case Study
 
-Open the application in Brackets by dragging the folder from your Finder or Explorer into the Brackets window. Click on the live preview button to open the application in your browser. Try out all the tools in the drawing application; these are the four icons on the left of the screen. There is a freehand tool, a line draw tool, a spray can and a mirror draw tool. You’ll notice that the 'clear' and 'save' buttons don’t work yet. We’ll come to those soon.
-Read through the files
+# Draw app
 
-Before you get started altering the application, read through the various files that make up the drawing application template. There are quite a few of them but several should be familiar.
+Generic draw app with a touch of my own design, but with a particular feeling of wanting to enhance some part of the over all experience.
+
+# Planning
+
+## Task 1: Choose a design pattern
+
+To allow the code to be extensible and comprehensible it is necessary to choose a structure on which to base anything upon.
+
+
+## Task 2: Create the appropiate classes
+
+Once the structure is choosed, the classes and the project domain logic have to be adapted.
+
+# Documentation
+
+## File structure & functions
 
 *Index.html:* The outlines of the HTML content of the application. This is a bit more complex than some of the other HTML files you will have seen in p5.js programmes. Some of this application is built on the DOM and outside of the canvas. There are also a lot of script imports. These files make up the rest of the application, along with p5.dom and the style sheet.
 *style.css:* The style sheet. As we are using the DOM, this handles the layout and look of the application. 
@@ -14,6 +27,13 @@ Before you get started altering the application, read through the various files 
 *lineToTool.js, freehandTool.js and mirrorDrawTool.js:* All tools that appear in the tool box. 
 
 For tools to work, they have to have: a property called 'icon', which is an URI for an image for the tool icon; a property called 'name', which is a string name for the tool; and a draw function.
+
+### Aditional resources
+
+[Journal](https://docs.google.com/document/d/1YfSfQXn442uYNtxgi3IpvSF41wdDeOncpdcn3jXqh2c/edit?usp=sharing) Where all the though process is documented and almost all the planning occours - And a little bit of German for practice.
+
+
+# Peer review assignment one
 
 ## Task 1: Comment the lineToTool.js
 Comment the file so that another programmer can understand what it does and how it works. You might not have seen loadPixel and updatePixel functions before. Check them out in the p5 documentation and see what they do. Try commenting them out and seeing how it affects the running of the program (remember to uncomment the two lines again before submitting your code).
@@ -33,8 +53,3 @@ In the helperFunctions constructor, two event handlers are created to handle the
 
 * Replace ??? on line 9 with the p5.js background function to reset the colour to white.
 * Replace ??? on line 19. In the p5.js reference guide, look up a function to save the canvas. Call this function so the user's drawing is saved to the hard disk.
-
-## When you're done: 
-Some other things to do when you have finished:
-Take a look at the mirror tool. It’s a bit more complex than the others we have seen; see if you can work out how it works.
-Try to write some tools of your own. Maybe a rectangle tool and an ellipse tool.
