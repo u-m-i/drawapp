@@ -54,5 +54,7 @@ function LineToTool(){
  * loadPixels reference: https://p5js.org/reference/p5/loadPixels/
  * 
  * It is also very important to understand the pixel array -> https://p5js.org/reference/p5/pixels/
+ * 
+ * This project is being hosted in https://github.com/u-m-i/drawapp, star it and will star yours back!
  */
 
