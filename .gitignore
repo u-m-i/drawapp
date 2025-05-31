@@ -2,3 +2,6 @@
 # Vim
 *.swp
 *.~
+
+# U of London
+peers/

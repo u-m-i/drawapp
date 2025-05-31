@@ -14,6 +14,16 @@ To allow the code to be extensible and comprehensible it is necessary to choose 
 
 Once the structure is choosed, the classes and the project domain logic have to be adapted.
 
+## Task 3: Type safety
+
+On various scripts, some checks were done to see if objects contained the required properties, like in the next snippet:
+
+```
+
+```
+
+This check is time consuming and it could be done earlier in the execution. How?
+
 # Documentation
 
 ## File structure & functions
