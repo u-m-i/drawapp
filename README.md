@@ -3,28 +3,36 @@
 
 Generic draw app with a touch of my own design, but with a particular feeling of wanting to enhance some part of the over all experience.
 
-# Planning
+## Super brainstorm
 
-## Task 1: Choose a design pattern
+- Make undo over each operation
+- Improve spray can density and style
+- Allow to save project and to export
+- Allow to make 3D figures
+
+## Planning
+
+### Task 1: Choose a design pattern
 
 To allow the code to be extensible and comprehensible it is necessary to choose a structure on which to base anything upon.
 
-
-## Task 2: Create the appropiate classes
+### Task 2: Create the appropiate classes
 
 Once the structure is choosed, the classes and the project domain logic have to be adapted.
 
-## Task 3: Type safety
+### Task 3: Type safety
 
 On various scripts, some checks were done to see if objects contained the required properties, like in the next snippet:
 
 ```
-
+if (toolbox.selectedTool.hasOwnProperty("draw")) {
+  toolbox.selectedTool.draw();
+} else {
+  alert("it doesn't look like your tool has a draw method!");
+}
 ```
 
 This check is time consuming and it could be done earlier in the execution. How?
-
-# Documentation
 
 ## File structure & functions
 
@@ -41,25 +49,3 @@ For tools to work, they have to have: a property called 'icon', which is an URI 
 ### Aditional resources
 
 [Journal](https://docs.google.com/document/d/1YfSfQXn442uYNtxgi3IpvSF41wdDeOncpdcn3jXqh2c/edit?usp=sharing) Where all the though process is documented and almost all the planning occours - And a little bit of German for practice.
-
-
-# Peer review assignment one
-
-## Task 1: Comment the lineToTool.js
-Comment the file so that another programmer can understand what it does and how it works. You might not have seen loadPixel and updatePixel functions before. Check them out in the p5 documentation and see what they do. Try commenting them out and seeing how it affects the running of the program (remember to uncomment the two lines again before submitting your code).
-
-## Task 2: Turn sprayCan into a constructor function
-Currently the spray can tool is an object literal declared in the sketch file. Change it to a constructor function in its own file:
-
-* Cut the spray can object literal from the sketch file and paste it into a new file. 
-* Save the file as sprayCanTool.js.
-* Rewrite the object literal as a constructor function called SprayCanTool(). Don’t forget that properties and methods are declared with this (e.g. this.points = 13 and this.draw = function()).
-* Delete the object literal from the file when you are done.
-* In the index.html file, add a new script tag for sprayCanTool.js.
-* In sketch.js change the toolbox.addTool(sprayCan); to create a new sprayCan.
-
-## Task 3: Complete the helper functions
-In the helperFunctions constructor, two event handlers are created to handle the save and clear buttons.
-
-* Replace ??? on line 9 with the p5.js background function to reset the colour to white.
-* Replace ??? on line 19. In the p5.js reference guide, look up a function to save the canvas. Call this function so the user's drawing is saved to the hard disk.
