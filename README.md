@@ -34,6 +34,11 @@ if (toolbox.selectedTool.hasOwnProperty("draw")) {
 
 This check is time consuming and it could be done earlier in the execution. How?
 
+### Additional notes
+
+```{ color: <color>, weight: <number>, bitmap: <bitmap>}```
+```{ tool: <tool>, weight: <number>, bitmap: <bitmap>}```
+
 ## File structure & functions
 
 *Index.html:* The outlines of the HTML content of the application. This is a bit more complex than some of the other HTML files you will have seen in p5.js programmes. Some of this application is built on the DOM and outside of the canvas. There are also a lot of script imports. These files make up the rest of the application, along with p5.dom and the style sheet.

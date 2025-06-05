@@ -1,33 +1,41 @@
 html,
 body {
   margin: 0px;
-  height: 100%;
   background-color: #222;
+}
+
+main{
+  margin:0;
+  padding:0;
+  height: 100%;
+}
+
+nav {
+  text-align: center;
+
+  & menu{
+    display: inline-block;
+  }
 }
 
 #sidebar {
   grid-area: sidebar;
   overflow-y: scroll;
+  display:none;
 }
 
 #content {
-  grid-area: content;
   margin: 1rem;
+  height: 600px;
   box-sizing: border-box;
-
-  & canvas{
+  text-align: center;
+  & canvas {
     border-radius: 12px;
   }
 }
 
-
 .header {
-  grid-area: header;
   font-family: Helvetica, sans-serif
-}
-
-.footer {
-  grid-area: footer;
 }
 
 .sideBarItem {
@@ -46,32 +54,6 @@ body {
   display: flex;
   flex-direction: grid;
   flex-flow: wrap;
-}
-
-.options {
-  grid-area: options;
-  padding: 15px;
-}
-
-.colourSwatches {
-  box-sizing: border-box;
-  width: 40px;
-  height: 40px;
-  max-height: 40px;
-  max-width: 40px;
-  margin: 5px;
-}
-
-
-.wrapper {
-  display: grid;
-  height: 100%;
-  grid-template-columns: 8% 19% minmax(500px, 1fr);
-  grid-template-rows: 35px minmax(500px, 1fr) 160px;
-  grid-template-areas:
-    "header header header"
-    "sidebar content content";
-  color: #444;
 }
 
 .box {
