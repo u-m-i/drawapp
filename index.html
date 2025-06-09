@@ -19,8 +19,19 @@
   </head>
   <body>
     <main class="wrapper">
-      <nav class="box header">
-        <input type="text" class="title" placeholder="untitled">
+      <nav class="header">
+        <div class="project-name">
+          <label>
+            <span>&nbsp;</span>
+            <input
+              type="text"
+              oninput="this.parentNode.dataset.value = this.value"
+              size="7"
+              placeholder="1"
+              class="title"
+            />
+          </label>
+        </div>
         <menu>
           <button id="saveImageButton">Save Image</button>
         </menu>

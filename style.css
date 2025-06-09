@@ -8,13 +8,68 @@ main{
   margin:0;
   padding:0;
   height: 100%;
+
+  --caret-color: #868;
 }
 
 nav {
+  background:unset;
   text-align: center;
+  margin: auto;
+  max-width: 60.267%;
 
   & menu{
     display: inline-block;
+    font-size: 1.45rem;
+    padding: 0;
+  }
+
+  & div{
+    display: inline-block;
+    max-width: max-content;
+    position:relative;
+  }
+
+  & input{
+    background-color: inherit;
+    margin:0;
+    border:#EE2 solid 1px;
+    resize: none;
+    padding: 0.25em;
+    outline:none;
+    caret-color:transparent;
+  }
+
+  & span{
+    animation: blink 1s step-end infinite;
+    border-left: 2px solid var(--caret-color);
+    box-sizing: border-box;
+    position: absolute;
+    height:calc(100% - 0.5em);
+    top:0.25em;
+    right:0;
+  }
+
+  & label{
+    display: inline-grid;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+
+    & input{
+      font-size: 2rem;
+      width:auto;
+      grid-area: 1/2;
+    }
+  }
+
+  & label::after{
+    font-size: 2rem;
+    box-sizing:border-box;
+    grid-area: 1/2;
+    content: attr(data-value) " ";
+    visibility: hidden;
+    white-space: pre-wrap;
   }
 }
 
@@ -62,6 +117,14 @@ nav {
   font-size: 150%;
 }
 
-.header {
-  background-color: #999;
+@keyframes blink {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50%{
+    border-color: var(--caret-color);
+  }
 }

@@ -7,14 +7,23 @@ Generic draw app with a touch of my own design, but with a particular feeling of
 
 - Make undo over each operation
 - Improve spray can density and style
-- Allow to save project and to export
+- Allow to save project
+- Allow to export to different formats
+- Allow white as alpha
 - Allow to make 3D figures
+- Create shortcuts and also configurable ones
 
 ## Planning
 
 ### Task 1: Choose a design pattern
 
 To allow the code to be extensible and comprehensible it is necessary to choose a structure on which to base anything upon.
+
+#### Exporting and Saving
+
+Export: Choose between different images formats and save the current canvas, including some settings for the alpha in case the PNG format is elected.
+
+Saving: Save the project with its name, its sub-layers and all its properties.
 
 ### Task 2: Create the appropiate classes
 
