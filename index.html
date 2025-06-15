@@ -19,22 +19,34 @@
   </head>
   <body>
     <main class="wrapper">
+      <div class="help">
+        <button>?</button>
+      </div>
       <nav class="header">
         <div class="project-name">
           <label>
-            <span>&nbsp;</span>
             <input
               type="text"
               oninput="this.parentNode.dataset.value = this.value"
-              size="7"
-              placeholder="1"
+              size="13"
+              placeholder="My untitled project"
               class="title"
             />
           </label>
         </div>
-        <menu>
-          <button id="saveImageButton">Save Image</button>
-        </menu>
+        <div class="menu-parent">
+          <menu role="menu">
+            <li>
+              <button id="saveImageButton">Save</button>
+            </li>
+            <li>
+              <button>Export</button>
+            </li>
+            <li>
+              <button>Import</button>
+            </li>
+          </menu>
+        </div>
       </nav>
       <div class="box" id="sidebar">
         <button id="clearButton">Clear</button>

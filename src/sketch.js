@@ -4,6 +4,8 @@ var toolbox = null;
 var colourP = null;
 var helpers = null;
 
+let showLog = false;
+
 function setup() {
 
 	//create a canvas to fill the content div from index.html
@@ -37,4 +39,5 @@ function draw() {
 	} else {
 		alert("it doesn't look like your tool has a draw method!");
 	}
+
 }

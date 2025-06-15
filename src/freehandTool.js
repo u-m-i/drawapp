@@ -25,6 +25,10 @@ function FreehandTool(){
 				line(previousMouseX, previousMouseY, mouseX, mouseY);
 				previousMouseX = mouseX;
 				previousMouseY = mouseY;
+        loadPixels();
+        if(showLog) console.log(pixels);
+        
+        if(showLog) showLog = false;
 			}
 		}
 		//if the user has released the mouse we want to set the previousMouse values 

@@ -19,11 +19,20 @@ Generic draw app with a touch of my own design, but with a particular feeling of
 
 To allow the code to be extensible and comprehensible it is necessary to choose a structure on which to base anything upon.
 
+#### Project JSON
+
+For saving the project a JSON format could help.
+
+```{ color: <color>, stroke_weight: <number>, sublayers: [<string>]}```
+
+\* We will save the motions of the user on strings called sublayers.
+
 #### Exporting and Saving
 
 Export: Choose between different images formats and save the current canvas, including some settings for the alpha in case the PNG format is elected.
 
 Saving: Save the project with its name, its sub-layers and all its properties.
+
 
 ### Task 2: Create the appropiate classes
 
@@ -33,7 +42,7 @@ Once the structure is choosed, the classes and the project domain logic have to 
 
 On various scripts, some checks were done to see if objects contained the required properties, like in the next snippet:
 
-```
+``` javascript
 if (toolbox.selectedTool.hasOwnProperty("draw")) {
   toolbox.selectedTool.draw();
 } else {
@@ -47,6 +56,10 @@ This check is time consuming and it could be done earlier in the execution. How?
 
 ```{ color: <color>, weight: <number>, bitmap: <bitmap>}```
 ```{ tool: <tool>, weight: <number>, bitmap: <bitmap>}```
+
+#### Design
+
+Use a blur for input filename, animate the background and give standard colors to the project
 
 ## File structure & functions
 
@@ -63,3 +76,11 @@ For tools to work, they have to have: a property called 'icon', which is an URI 
 ### Aditional resources
 
 [Journal](https://docs.google.com/document/d/1YfSfQXn442uYNtxgi3IpvSF41wdDeOncpdcn3jXqh2c/edit?usp=sharing) Where all the though process is documented and almost all the planning occours - And a little bit of German for practice.
+
+[Caret-shape](https://css-tricks.com/almanac/properties/c/caret-shape/)
+
+[Growing input areas](https://css-tricks.com/auto-growing-inputs-textareas/)
+
+[Background effects](https://prismic.io/blog/css-background-effects)
+
+[Hover effects](https://prismic.io/blog/css-hover-effects)
