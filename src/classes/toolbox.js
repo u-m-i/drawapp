@@ -1,12 +1,15 @@
-//container object for storing the tools. Functions to add new tools and select a tool
-function Toolbox() {
+/**
+ * 
+ * Relation Toolbox [aggregation] Tool
+ * 
+ */
+export class Toolbox {
 
-	var self = this;
+	self = this;
+	tools = [];
+	selectedTool = null;
 
-	this.tools = [];
-	this.selectedTool = null;
-
-	var toolbarItemClick = function() {
+	toolbarItemClick() {
 		//remove any existing borders
 		var items = selectAll(".sideBarItem");
 		for (var i = 0; i < items.length; i++) {
@@ -18,22 +21,19 @@ function Toolbox() {
 
 		//call loadPixels to make sure most recent changes are saved to pixel array
 		loadPixels();
-
 	}
 
 	//add a new tool icon to the html page
-	var addToolIcon = function(icon, name) {
+	addToolIcon(icon, name) {
 		var sideBarItem = createDiv("<img src='" + icon + "'></div>");
 		sideBarItem.class('sideBarItem')
 		sideBarItem.id(name + "sideBarItem")
 		sideBarItem.parent('sidebar');
 		sideBarItem.mouseClicked(toolbarItemClick);
-
-
 	};
 
 	//add a tool to the tools array
-	this.addTool = function(tool) {
+	addTool(tool) {
 		//check that the object tool has an icon and a name
 		if (!tool.hasOwnProperty("icon") || !tool.hasOwnProperty("name")) {
 			alert("make sure your tool has both a name and an icon");
@@ -45,9 +45,9 @@ function Toolbox() {
 		if (this.selectedTool == null) {
 			this.selectTool(tool.name);
 		}
-	};
+	}
 
-	this.selectTool = function(toolName) {
+	selectTool(toolName) {
 		//search through the tools for one that's name matches
 		//toolName
 		for (var i = 0; i < this.tools.length; i++) {
@@ -68,6 +68,4 @@ function Toolbox() {
 			}
 		}
 	};
-
-
 }
